@@ -11,9 +11,10 @@ function Login() {
         password: ""
 })
 const navigate = useNavigate();
+
 const handleChange=(e)=>{
     const {name,value}=e.target
-    setFormData({...formData,[name]:value})
+    setFormData({...formData,[name]:value});
 };
 const handleSubmit = async(e) =>{
     e.preventDefault();
@@ -27,9 +28,6 @@ const handleSubmit = async(e) =>{
         localStorage.setItem("userInfo",JSON.stringify(response.data));
         navigate("/home");
     }
-
-
-
 };
   return (
     <Container>
